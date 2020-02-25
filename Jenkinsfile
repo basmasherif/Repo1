@@ -1,10 +1,11 @@
 node
 {
 stage (‘SCM Checkout’){
-def mvnHome = tool name: 'M3', type: 'maven'
-git ‘https://github.com/basmasherif/Repo1.git‘
+git ‘https://github.com/basmasherif/Repo1‘
 } 
 stage(‘Compile-Package’){
-sh ‘mvn package’
+  //get mvn Home path
+def mvnHome = tool name: 'M3', type: 'maven'
+  sh "${mvnHome}/bin/mvn package"
 }
 }
