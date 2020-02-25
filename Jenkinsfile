@@ -1,6 +1,6 @@
 node
 {
-stage (‘ SCM Checkout’){
+stage (‘SCM Checkout’){
 git ‘https://github.com/basmasherif/Repo1.git‘
 } 
 stage(‘Compile-Package’){
